@@ -35,6 +35,8 @@ dconf profile dumps and is not provided.
   features minimal highlighting: constants, strings, functions, parameters,
   and little else — keywords, operators, and variables stay at the default
   foreground, and punctuation recedes. ([setup](helix/))
+- [Neovim](https://neovim.io) — the same baseline Helix philosophy, LSP semantic tokens aligned. ([setup](nvim/))
+- [Vim](https://www.vim.org) — a reduced rendering for classic syntax groups, because Vim ships everywhere. ([setup](vim/))
 - [lazygit](https://github.com/jesseduffield/lazygit), a simple terminal UI
   for git commands. ([setup](lazygit/))
 
@@ -46,7 +48,7 @@ dconf profile dumps and is not provided.
 
 ## Samples
 
-Parallel implementations of one small program across Python, Go, Rust,
+Parallel implementations of one example program across Python, Go, Rust,
 Bash, C, and TypeScript, for judging how baseline renders common syntax
 in each — see [samples/](samples/).
 
