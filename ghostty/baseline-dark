@@ -1,0 +1,45 @@
+# baseline-dark — Ghostty theme, sibling of the Helix baseline_dark theme.
+# MD3 tonal palettes: tone 80 accents on tone ~6 surface; ANSI brights are
+# the tone 90 pastels (the onXContainer tier in the Helix palette).
+
+background = #111418
+foreground = #C3C7CF
+
+cursor-color = #A0CAFD
+cursor-text = #003258
+
+selection-background = #194975
+selection-foreground = #D1E4FF
+
+# black / bright black (bright black = outline: de-emphasized CLI text,
+# e.g. shell autosuggestions, stays legible at 5.8:1)
+palette = 0=#32353A
+palette = 8=#8D9199
+
+# red
+palette = 1=#FFB3AC
+palette = 9=#FFDAD6
+
+# green
+palette = 2=#A1D39A
+palette = 10=#BDF0B5
+
+# yellow
+palette = 3=#D4C871
+palette = 11=#F1E48A
+
+# blue
+palette = 4=#AAC7FF
+palette = 12=#D6E3FF
+
+# magenta
+palette = 5=#EBB5ED
+palette = 13=#FFD6FE
+
+# cyan
+palette = 6=#83D3E3
+palette = 14=#A0EFFF
+
+# white / bright white (onSurfaceVariant / onSurface)
+palette = 7=#C3C7CF
+palette = 15=#E1E2E8

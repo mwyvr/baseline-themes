@@ -1,0 +1,274 @@
+# baseline_light.toml
+# The light sibling of baseline_dark. Same tonal palettes, sampled at the
+# Material Design 3 light-scheme tones: accents at tone 40 (~6.2:1 on the
+# surface — uniform across all seven hues), containers at tone 90, surface
+# at tone 98. Palette generated from baseline_dark via material-color-
+# utilities, so the two themes are provably siblings, not lookalikes.
+#
+# PHILOSOPHY: identical to baseline_dark — highlight what is scarce, mute
+# what is everywhere. See that file's header for the full rationale.
+#
+# LIGHT-MODE DELTAS from the dark body (emphasis inverts on paper):
+# • Comment ramp flips: comment = neutral50, doc comments = neutral40
+#   (darker ink = more present on a light surface)
+# • markup.raw uses neutral40 for the same reason
+# • Line numbers use neutral60 (~3:1, matching dark's perceptual weight)
+# • Whitespace/indent guides use outlineVariant (tone 80)
+# • Error/red families use canonical MD3 chroma (#BA1A1A) — true chroma is
+#   unrecoverable from gamut-clipped tone-80 reds, so it is restored here
+# Everything else is identical line-for-line by semantic palette name.
+#
+# Sub-scopes inherit from parents via Helix's longest-match resolution and
+# are only written out where they differ.
+
+# DIAGNOSTICS ==============================
+
+warning = { fg = "yellow" }
+error = { fg = "red" }
+info = { fg = "blue" }
+hint = { fg = "magenta" }
+# warning.diagnostic.inline etc. inherit the colors above via fallback.
+
+"diagnostic" = { underline = { style = "curl" } }
+"diagnostic.hint" = { underline = { color = "magenta", style = "dotted" } }
+"diagnostic.info" = { underline = { color = "blue", style = "dotted" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# UI ==============================
+
+"ui.background" = { bg = "surface" }
+"ui.background.separator" = { fg = "outlineVariant" }
+"ui.window" = { fg = "outlineVariant" }
+
+"ui.gutter" = { bg = "surface" }
+"ui.gutter.selected" = { bg = "surfaceContainer" }
+
+"ui.text" = { fg = "onSurfaceVariant" }
+"ui.text.focus" = { fg = "onSurface", bg = "surfaceContainerHighest" }
+"ui.text.inactive" = { fg = "outline" }
+"ui.text.info" = { fg = "onSecondaryContainer" }
+"ui.text.directory" = { fg = "blue" }
+"ui.text.symlink" = { fg = "cyan", modifiers = ["italic"] }
+
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { bg = "primaryContainer", fg = "onPrimaryContainer" }
+
+"ui.selection" = { bg = "primaryContainer" }
+
+"ui.linenr" = { fg = "neutral60", bg = "surface" }
+"ui.linenr.selected" = { fg = "primary", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "onSurface", bg = "surfaceContainer" }
+"ui.statusline.inactive" = { fg = "outline", bg = "surfaceContainerLow" }
+"ui.statusline.normal" = { fg = "onPrimaryContainer", bg = "primaryContainer" }
+"ui.statusline.insert" = { fg = "onSecondaryContainer", bg = "secondaryContainer" }
+"ui.statusline.select" = { fg = "onTertiaryContainer", bg = "tertiaryContainer" }
+"ui.statusline.separator" = { fg = "outline" }
+
+"ui.bufferline" = { fg = "outline", bg = "surfaceContainer" }
+"ui.bufferline.active" = { fg = "onSurface", bg = "surfaceContainerHighest", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "surface" }
+
+"ui.menu" = { fg = "onSurface", bg = "surfaceContainerHigh" }
+"ui.menu.selected" = { fg = "inverseOnSurface", bg = "inverseSurface" }
+"ui.menu.scroll" = { fg = "primary", bg = "surfaceContainer" }
+
+"ui.popup" = { fg = "onSurface", bg = "surfaceContainerHigh" }
+"ui.popup.info" = { fg = "onSurface", bg = "surfaceContainer" }
+
+"ui.picker.header" = { fg = "onSurface", bg = "surfaceContainer" }
+"ui.picker.header.column" = { fg = "outline" }
+"ui.picker.header.column.active" = { fg = "onSurface", bg = "surfaceContainerHighest" }
+
+"ui.help" = { fg = "onSurfaceVariant", bg = "surfaceContainerHigh" }
+
+"ui.highlight" = { bg = "secondaryContainer" }
+"ui.highlight.frameline" = { bg = "tertiaryContainer" }
+
+"ui.cursorline.primary" = { bg = "surfaceContainer" }
+"ui.cursorline.secondary" = { bg = "surfaceContainerLow" }
+
+"ui.cursorcolumn.primary" = { bg = "surfaceContainer" }
+"ui.cursorcolumn.secondary" = { bg = "surfaceContainerLow" }
+
+"ui.virtual.ruler" = { bg = "surfaceContainerLow" }
+"ui.virtual.whitespace" = { fg = "outlineVariant" }
+"ui.virtual.indent-guide" = { fg = "outlineVariant" }
+"ui.virtual.inlay-hint" = { fg = "outline", modifiers = ["italic"] }
+"ui.virtual.wrap" = { fg = "outline" }
+"ui.virtual.jump-label" = { fg = "onError", bg = "error", modifiers = ["bold"] }
+
+"ui.debug.breakpoint" = { fg = "red" }
+"ui.debug.active" = { fg = "onError", bg = "error" }
+
+# SYNTAX HIGHLIGHTING ==============================
+
+"comment" = { fg = "neutral50", modifiers = ["italic"] }
+"comment.line.documentation" = { fg = "neutral40", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "neutral40", modifiers = ["italic"] }
+"comment.unused" = { modifiers = ["dim"] }
+
+"constant" = { fg = "green" }
+"constant.character.escape" = { fg = "cyan" }
+
+"string" = { fg = "green" }
+"string.special" = { fg = "cyan" }
+
+"variable" = { fg = "onSurfaceVariant" }
+"variable.builtin" = { fg = "blue" }
+"variable.parameter" = { fg = "orange" }
+
+"label" = { fg = "onSurfaceVariant" }
+
+"punctuation" = { fg = "outline" }
+
+"keyword" = { fg = "onSurfaceVariant" }
+"operator" = { fg = "onSurfaceVariant" }
+
+"function" = { fg = "blue" }
+"function.builtin" = { fg = "blue", modifiers = ["dim"] }
+"function.macro" = { fg = "magenta" }
+
+"constructor" = { fg = "blue" }
+
+"tag" = { fg = "blue" }
+"tag.builtin" = { fg = "blue", modifiers = ["bold"] }
+
+"special" = { fg = "magenta" }
+
+# STRUCTURAL LAYER (optional) — uncomment for cyan architecture cues
+# "type" = { fg = "cyan" }
+# "type.builtin" = { fg = "cyan", modifiers = ["bold"] }
+# "namespace" = { fg = "cyan" }
+# "attribute" = { fg = "cyan" }
+
+# MARKUP ==============================
+
+"markup.heading" = { fg = "blue", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "outline" }
+
+"markup.list" = { fg = "blue" }
+"markup.list.checked" = { fg = "green" }
+"markup.list.unchecked" = { fg = "outline" }
+
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+
+"markup.link" = { fg = "blue" }
+"markup.link.url" = { fg = "outline", underline = { color = "outlineVariant", style = "dotted" } }
+
+"markup.quote" = { fg = "neutral50", modifiers = ["italic"] }
+
+"markup.raw" = { fg = "neutral40" }
+"markup.raw.block" = { fg = "neutral40", bg = "surfaceContainerLow" }
+
+# DIFF ==============================
+
+"diff.plus" = { fg = "green" }
+"diff.minus" = { fg = "red" }
+"diff.delta" = { fg = "yellow" }
+"diff.delta.conflict" = { fg = "red", modifiers = ["bold"] }
+
+"tabstop" = { bg = "primaryContainer", fg = "onPrimaryContainer" }
+
+# PALETTE ==============================
+# Material Design 3 light scheme (tone 40 accents on tone 98 surface),
+# generated from baseline_dark's tonal palettes via material-color-utilities.
+# Measured WCAG contrast vs surface #F8F9FF:
+#   accents (green/blue/orange/cyan/magenta/red/yellow/primary) ≈ 6.15:1
+#   onSurface 16.3:1 · onSurfaceVariant 8.9:1 · outline 4.3:1
+#   neutral40 6.2:1 · neutral50 4.3:1 · neutral60 3.0:1 · outlineVariant 1.6:1
+
+[palette]
+# Primary (Blue)
+primary = "#35618E"
+onPrimary = "#FFFFFF"
+primaryContainer = "#D1E4FF"
+onPrimaryContainer = "#001D36"
+
+# Secondary (Blue-gray)
+secondary = "#535F70"
+onSecondary = "#FFFFFF"
+secondaryContainer = "#D7E3F8"
+onSecondaryContainer = "#101C2B"
+
+# Tertiary (Purple)
+tertiary = "#6A5778"
+onTertiary = "#FFFFFF"
+tertiaryContainer = "#F2DAFF"
+onTertiaryContainer = "#251531"
+
+# Error (Red) — canonical MD3 error palette
+error = "#BA1A1A"
+onError = "#FFFFFF"
+errorContainer = "#FFDAD6"
+onErrorContainer = "#410002"
+
+# Surface & Background
+background = "#F8F9FF"
+onBackground = "#191C20"
+surface = "#F8F9FF"
+onSurface = "#191C20"
+surfaceVariant = "#DFE3EB"
+onSurfaceVariant = "#42474E"
+surfaceDim = "#D9DAE0"
+surfaceBright = "#F8F9FF"
+surfaceContainerLowest = "#FFFFFF"
+surfaceContainerLow = "#F2F3F9"
+surfaceContainer = "#EDEDF4"
+surfaceContainerHigh = "#E7E8EE"
+surfaceContainerHighest = "#E1E2E8"
+
+# Outline
+outline = "#73777F"
+outlineVariant = "#C3C7CF"
+
+# Inverse
+inverseSurface = "#2E3035"
+inverseOnSurface = "#EFF0F6"
+inversePrimary = "#A0CAFD"
+
+# Neutral scale (for comments and subtle UI)
+neutral40 = "#5E5E61"
+neutral50 = "#77777A"
+neutral60 = "#919093"
+
+# Semantic colors for syntax highlighting
+blue = "#415F90"
+onBlue = "#FFFFFF"
+blueContainer = "#D6E3FF"
+onBlueContainer = "#001B3E"
+
+yellow = "#685F12"
+onYellow = "#FFFFFF"
+yellowContainer = "#F1E48A"
+onYellowContainer = "#201C00"
+
+green = "#3C683A"
+onGreen = "#FFFFFF"
+greenContainer = "#BDF0B5"
+onGreenContainer = "#002204"
+
+magenta = "#7B4E7F"
+onMagenta = "#FFFFFF"
+magentaContainer = "#FFD6FE"
+onMagentaContainer = "#310938"
+
+cyan = "#006876"
+onCyan = "#FFFFFF"
+cyanContainer = "#A0EFFF"
+onCyanContainer = "#001F25"
+
+orange = "#865318"
+onOrange = "#FFFFFF"
+orangeContainer = "#FFDCBE"
+onOrangeContainer = "#2C1600"
+
+red = "#BA1A1A"
+onRed = "#FFFFFF"
+redContainer = "#FFDAD6"
+onRedContainer = "#410002"

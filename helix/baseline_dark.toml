@@ -1,0 +1,275 @@
+# baseline_dark.toml
+# A minimalist dark theme for Helix that prioritizes readability through
+# restrained use of color. Built on Material Design 3 tonal palettes; all
+# accent colors sit at tone 80 and measure ~10.8:1 against the surface, so
+# no single highlight shouts louder than another.
+#
+# PHILOSOPHY: highlight what is scarce, mute what is everywhere.
+# • Constants & strings (green) — sparse, and logic paths start from them
+# • Function names (blue) — structure; note Helix colors calls as well as
+#   definitions, so this is the loudest concession in the theme
+# • Parameters (orange) — inputs/configuration at a glance
+# • Escapes & special strings (cyan) — rare, easy to miss inside green
+# • Macros / meta (magenta) — meta-programming deserves a flag
+# • Keywords, operators, variables — default foreground, deliberately unstyled
+# • Punctuation — receded (outline) so names stand out from syntax
+# • Comments — dimmed but readable (≥4:1); doc comments one step brighter
+#
+# STRUCTURAL LAYER (optional): cyan for types/namespaces/attributes is kept
+# as a commented block near the end of the syntax section. Uncomment to
+# trade a little calm for architectural visibility.
+#
+# COVERAGE: Helix resolves the longest matching key, so sub-scopes
+# (constant.numeric, keyword.control.return, diff.plus.gutter, …) inherit
+# from their parents and are only written out where they differ.
+
+# DIAGNOSTICS ==============================
+
+warning = { fg = "yellow" }
+error = { fg = "red" }
+info = { fg = "blue" }
+hint = { fg = "magenta" }
+# warning.diagnostic.inline etc. inherit the colors above via fallback.
+
+"diagnostic" = { underline = { style = "curl" } }
+"diagnostic.hint" = { underline = { color = "magenta", style = "dotted" } }
+"diagnostic.info" = { underline = { color = "blue", style = "dotted" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# UI ==============================
+
+"ui.background" = { bg = "surface" }
+"ui.background.separator" = { fg = "outlineVariant" }
+"ui.window" = { fg = "outlineVariant" }
+
+"ui.gutter" = { bg = "surface" }
+"ui.gutter.selected" = { bg = "surfaceContainer" }
+
+"ui.text" = { fg = "onSurfaceVariant" }
+"ui.text.focus" = { fg = "onSurface", bg = "surfaceContainerHighest" }
+"ui.text.inactive" = { fg = "outline" }
+"ui.text.info" = { fg = "onSecondaryContainer" }
+"ui.text.directory" = { fg = "blue" }
+"ui.text.symlink" = { fg = "cyan", modifiers = ["italic"] }
+
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { bg = "primaryContainer", fg = "onPrimaryContainer" }
+
+"ui.selection" = { bg = "primaryContainer" }
+
+"ui.linenr" = { fg = "neutral40", bg = "surface" }
+"ui.linenr.selected" = { fg = "primary", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "onSurface", bg = "surfaceContainer" }
+"ui.statusline.inactive" = { fg = "outline", bg = "surfaceContainerLow" }
+"ui.statusline.normal" = { fg = "onPrimaryContainer", bg = "primaryContainer" }
+"ui.statusline.insert" = { fg = "onSecondaryContainer", bg = "secondaryContainer" }
+"ui.statusline.select" = { fg = "onTertiaryContainer", bg = "tertiaryContainer" }
+"ui.statusline.separator" = { fg = "outline" }
+
+"ui.bufferline" = { fg = "outline", bg = "surfaceContainer" }
+"ui.bufferline.active" = { fg = "onSurface", bg = "surfaceContainerHighest", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "surface" }
+
+"ui.menu" = { fg = "onSurface", bg = "surfaceContainerHigh" }
+"ui.menu.selected" = { fg = "inverseOnSurface", bg = "inverseSurface" }
+"ui.menu.scroll" = { fg = "primary", bg = "surfaceContainer" }
+
+"ui.popup" = { fg = "onSurface", bg = "surfaceContainerHigh" }
+"ui.popup.info" = { fg = "onSurface", bg = "surfaceContainer" }
+
+"ui.picker.header" = { fg = "onSurface", bg = "surfaceContainer" }
+"ui.picker.header.column" = { fg = "outline" }
+"ui.picker.header.column.active" = { fg = "onSurface", bg = "surfaceContainerHighest" }
+
+"ui.help" = { fg = "onSurfaceVariant", bg = "surfaceContainerHigh" }
+
+"ui.highlight" = { bg = "secondaryContainer" }
+"ui.highlight.frameline" = { bg = "tertiaryContainer" }
+
+"ui.cursorline.primary" = { bg = "surfaceContainer" }
+"ui.cursorline.secondary" = { bg = "surfaceContainerLow" }
+
+"ui.cursorcolumn.primary" = { bg = "surfaceContainer" }
+"ui.cursorcolumn.secondary" = { bg = "surfaceContainerLow" }
+
+"ui.virtual.ruler" = { bg = "surfaceContainerLow" }
+"ui.virtual.whitespace" = { fg = "surfaceContainerHighest" }
+"ui.virtual.indent-guide" = { fg = "surfaceContainerHighest" }
+"ui.virtual.inlay-hint" = { fg = "outline", modifiers = ["italic"] }
+"ui.virtual.wrap" = { fg = "outline" }
+"ui.virtual.jump-label" = { fg = "onError", bg = "error", modifiers = ["bold"] }
+
+"ui.debug.breakpoint" = { fg = "red" }
+"ui.debug.active" = { fg = "onError", bg = "error" }
+
+# SYNTAX HIGHLIGHTING ==============================
+
+"comment" = { fg = "neutral50", modifiers = ["italic"] }
+"comment.line.documentation" = { fg = "neutral60", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "neutral60", modifiers = ["italic"] }
+"comment.unused" = { modifiers = ["dim"] }
+
+"constant" = { fg = "green" }
+"constant.character.escape" = { fg = "cyan" }
+
+"string" = { fg = "green" }
+"string.special" = { fg = "cyan" }
+
+"variable" = { fg = "onSurfaceVariant" }
+"variable.builtin" = { fg = "blue" }
+"variable.parameter" = { fg = "orange" }
+
+"label" = { fg = "onSurfaceVariant" }
+
+"punctuation" = { fg = "outline" }
+
+"keyword" = { fg = "onSurfaceVariant" }
+"operator" = { fg = "onSurfaceVariant" }
+
+"function" = { fg = "blue" }
+"function.builtin" = { fg = "blue", modifiers = ["dim"] }
+"function.macro" = { fg = "magenta" }
+
+"constructor" = { fg = "blue" }
+
+"tag" = { fg = "blue" }
+"tag.builtin" = { fg = "blue", modifiers = ["bold"] }
+
+"special" = { fg = "magenta" }
+
+# STRUCTURAL LAYER (optional) — uncomment for cyan architecture cues
+# "type" = { fg = "cyan" }
+# "type.builtin" = { fg = "cyan", modifiers = ["bold"] }
+# "namespace" = { fg = "cyan" }
+# "attribute" = { fg = "cyan" }
+
+# MARKUP ==============================
+
+"markup.heading" = { fg = "blue", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "outline" }
+
+"markup.list" = { fg = "blue" }
+"markup.list.checked" = { fg = "green" }
+"markup.list.unchecked" = { fg = "outline" }
+
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+
+"markup.link" = { fg = "blue" }
+"markup.link.url" = { fg = "outline", underline = { color = "outlineVariant", style = "dotted" } }
+
+"markup.quote" = { fg = "neutral50", modifiers = ["italic"] }
+
+"markup.raw" = { fg = "neutral60" }
+"markup.raw.block" = { fg = "neutral60", bg = "surfaceContainerLow" }
+
+# DIFF ==============================
+
+"diff.plus" = { fg = "green" }
+"diff.minus" = { fg = "red" }
+"diff.delta" = { fg = "yellow" }
+"diff.delta.conflict" = { fg = "red", modifiers = ["bold"] }
+
+"tabstop" = { bg = "primaryContainer", fg = "onPrimaryContainer" }
+
+# PALETTE ==============================
+# Material Design 3 dark theme palette (tone 80 accents on tone ~6 surface).
+# Measured WCAG contrast vs surface #111418:
+#   accents (green/blue/orange/cyan/magenta/red/yellow/primary) ≈ 10.8:1
+#   onSurface 14.3:1 · onSurfaceVariant 10.9:1 · outline 5.8:1
+#   neutral60 5.8:1 · neutral50 4.1:1 · neutral40 2.9:1 · outlineVariant 2.0:1
+
+[palette]
+# Primary (Blue)
+primary = "#A0CAFD"
+onPrimary = "#003258"
+primaryContainer = "#194975"
+onPrimaryContainer = "#D1E4FF"
+
+# Secondary (Blue-gray)
+secondary = "#BBC7DB"
+onSecondary = "#253140"
+secondaryContainer = "#3B4858"
+onSecondaryContainer = "#D7E3F7"
+
+# Tertiary (Purple)
+tertiary = "#D6BEE4"
+onTertiary = "#3B2948"
+tertiaryContainer = "#523F5F"
+onTertiaryContainer = "#F2DAFF"
+
+# Error (Red)
+error = "#FFB4AB"
+onError = "#690005"
+errorContainer = "#93000A"
+onErrorContainer = "#FFDAD6"
+
+# Surface & Background
+background = "#111418"
+onBackground = "#E1E2E8"
+surface = "#111418"
+onSurface = "#E1E2E8"
+surfaceVariant = "#43474E"
+onSurfaceVariant = "#C3C7CF"
+surfaceDim = "#111418"
+surfaceBright = "#36393E"
+surfaceContainerLowest = "#0B0E13"
+surfaceContainerLow = "#191C20"
+surfaceContainer = "#1D2024"
+surfaceContainerHigh = "#272A2F"
+surfaceContainerHighest = "#32353A"
+
+# Outline
+outline = "#8D9199"
+outlineVariant = "#43474E"
+
+# Inverse
+inverseSurface = "#E1E2E8"
+inverseOnSurface = "#2E3135"
+inversePrimary = "#36618E"
+
+# Neutral scale (for comments and subtle UI)
+neutral40 = "#5E5E61"
+neutral50 = "#77777A"
+neutral60 = "#909094"
+
+# Semantic colors for syntax highlighting
+blue = "#AAC7FF"
+onBlue = "#01315E"
+blueContainer = "#224876"
+onBlueContainer = "#D4E3FF"
+
+yellow = "#D4C871"
+onYellow = "#363100"
+yellowContainer = "#4F4800"
+onYellowContainer = "#F1E48A"
+
+green = "#A1D39A"
+onGreen = "#0A390F"
+greenContainer = "#235024"
+onGreenContainer = "#BCF0B4"
+
+magenta = "#EBB5ED"
+onMagenta = "#49204E"
+magentaContainer = "#613766"
+onMagentaContainer = "#FFD6FE"
+
+cyan = "#83D3E3"
+onCyan = "#00363E"
+cyanContainer = "#004E59"
+onCyanContainer = "#A1EFFF"
+
+orange = "#FDB975"
+onOrange = "#4A2800"
+orangeContainer = "#693C00"
+onOrangeContainer = "#FFDCBE"
+
+red = "#FFB3AC"
+onRed = "#571E1A"
+redContainer = "#73332F"
+onRedContainer = "#FFDAD6"

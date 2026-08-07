@@ -1,0 +1,47 @@
+# baseline — Ptyxis palette, both modes in one file. Ptyxis follows the
+# desktop light/dark style and selects the matching section automatically.
+# Install: ~/.local/share/org.gnome.Ptyxis/palettes/baseline.palette
+# (Flatpak: ~/.var/app/org.gnome.Ptyxis/data/org.gnome.Ptyxis/palettes/)
+
+[Palette]
+Name=Baseline
+
+[Dark]
+Background=#111418
+Foreground=#C3C7CF
+Color0=#32353A
+Color1=#FFB3AC
+Color2=#A1D39A
+Color3=#D4C871
+Color4=#AAC7FF
+Color5=#EBB5ED
+Color6=#83D3E3
+Color7=#C3C7CF
+Color8=#8D9199
+Color9=#FFDAD6
+Color10=#BDF0B5
+Color11=#F1E48A
+Color12=#D6E3FF
+Color13=#FFD6FE
+Color14=#A0EFFF
+Color15=#E1E2E8
+
+[Light]
+Background=#F8F9FF
+Foreground=#42474E
+Color0=#191C20
+Color1=#BA1A1A
+Color2=#3C683A
+Color3=#685F12
+Color4=#415F90
+Color5=#7B4E7F
+Color6=#006876
+Color7=#E1E2E8
+Color8=#73777F
+Color9=#93000A
+Color10=#245024
+Color11=#4F4800
+Color12=#284777
+Color13=#613766
+Color14=#004E59
+Color15=#FFFFFF

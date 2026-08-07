@@ -1,0 +1,16 @@
+# baseline-light — lazygit theme fragment, sibling of baseline_light.
+# Merge into config.yml, or point LG_CONFIG_FILE at both files.
+gui:
+  theme:
+    defaultFgColor: ['#42474E']
+    activeBorderColor: ['#35618E', 'bold']
+    inactiveBorderColor: ['#73777F']
+    searchingActiveBorderColor: ['#685F12', 'bold']
+    optionsTextColor: ['#73777F']
+    selectedLineBgColor: ['#EDEDF4']
+    inactiveViewSelectedLineBgColor: ['#F2F3F9']
+    cherryPickedCommitFgColor: ['#001D36']
+    cherryPickedCommitBgColor: ['#D1E4FF']
+    markedBaseCommitFgColor: ['#201C00']
+    markedBaseCommitBgColor: ['#F1E48A']
+    unstagedChangesColor: ['#BA1A1A']

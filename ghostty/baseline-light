@@ -1,0 +1,45 @@
+# baseline-light — Ghostty theme, sibling of the Helix baseline_light theme.
+# MD3 tonal palettes: tone 40 accents on tone 98 surface. ANSI brights are
+# tone 30 — on a light surface, darker ink is emphasis, matching the same
+# inversion the Helix theme applies to doc comments.
+
+background = #F8F9FF
+foreground = #42474E
+
+cursor-color = #35618E
+cursor-text = #FFFFFF
+
+selection-background = #D1E4FF
+selection-foreground = #001D36
+
+# black / bright black (black = onSurface ink; bright black = outline)
+palette = 0=#191C20
+palette = 8=#73777F
+
+# red (canonical MD3 error chroma; tone-80 seeds can't recover true red)
+palette = 1=#BA1A1A
+palette = 9=#93000A
+
+# green
+palette = 2=#3C683A
+palette = 10=#245024
+
+# yellow
+palette = 3=#685F12
+palette = 11=#4F4800
+
+# blue
+palette = 4=#415F90
+palette = 12=#284777
+
+# magenta
+palette = 5=#7B4E7F
+palette = 13=#613766
+
+# cyan
+palette = 6=#006876
+palette = 14=#004E59
+
+# white / bright white
+palette = 7=#E1E2E8
+palette = 15=#FFFFFF

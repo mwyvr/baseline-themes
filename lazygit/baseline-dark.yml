@@ -1,0 +1,16 @@
+# baseline-dark — lazygit theme fragment, sibling of baseline_dark.
+# Merge into config.yml, or point LG_CONFIG_FILE at both files.
+gui:
+  theme:
+    defaultFgColor: ['#C3C7CF']
+    activeBorderColor: ['#A0CAFD', 'bold']
+    inactiveBorderColor: ['#8D9199']
+    searchingActiveBorderColor: ['#D4C871', 'bold']
+    optionsTextColor: ['#8D9199']
+    selectedLineBgColor: ['#1D2024']
+    inactiveViewSelectedLineBgColor: ['#191C20']
+    cherryPickedCommitFgColor: ['#D1E4FF']
+    cherryPickedCommitBgColor: ['#194975']
+    markedBaseCommitFgColor: ['#F1E48A']
+    markedBaseCommitBgColor: ['#4F4800']
+    unstagedChangesColor: ['#FFB3AC']

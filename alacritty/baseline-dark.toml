@@ -1,0 +1,35 @@
+# baseline-dark — Alacritty theme, sibling of the Ghostty baseline-dark theme.
+# Usage (alacritty.toml): [general] import = ["~/.config/alacritty/baseline-dark.toml"]
+# (Alacritty 0.13 and earlier: top-level `import = [...]`.)
+
+[colors.primary]
+background = "#111418"
+foreground = "#C3C7CF"
+
+[colors.cursor]
+text = "#003258"
+cursor = "#A0CAFD"
+
+[colors.selection]
+text = "#D1E4FF"
+background = "#194975"
+
+[colors.normal]
+black = "#32353A"
+red = "#FFB3AC"
+green = "#A1D39A"
+yellow = "#D4C871"
+blue = "#AAC7FF"
+magenta = "#EBB5ED"
+cyan = "#83D3E3"
+white = "#C3C7CF"
+
+[colors.bright]
+black = "#8D9199"
+red = "#FFDAD6"
+green = "#BDF0B5"
+yellow = "#F1E48A"
+blue = "#D6E3FF"
+magenta = "#FFD6FE"
+cyan = "#A0EFFF"
+white = "#E1E2E8"

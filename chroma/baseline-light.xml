@@ -1,0 +1,35 @@
+<!-- baseline-light — Chroma style, sibling of the Helix baseline_light
+     theme. Same rules at MD3 light tones (accents 40 on tone 96 block
+     background). -->
+<style name="baseline-light">
+  <entry type="Background" style="bg:#F2F3F9 #42474E"/>
+  <entry type="Text" style="#42474E"/>
+  <entry type="Error" style="#BA1A1A"/>
+  <entry type="Comment" style="italic #77777A"/>
+  <entry type="Literal" style="#3C683A"/>
+  <entry type="LiteralStringEscape" style="#006876"/>
+  <entry type="LiteralStringSymbol" style="#006876"/>
+  <entry type="KeywordConstant" style="#3C683A"/>
+  <entry type="NameConstant" style="#3C683A"/>
+  <entry type="NameFunction" style="#415F90"/>
+  <entry type="NameBuiltin" style="#415F90"/>
+  <entry type="NameTag" style="#415F90"/>
+  <entry type="NameDecorator" style="#7B4E7F"/>
+  <entry type="Punctuation" style="#73777F"/>
+  <entry type="GenericInserted" style="#3C683A"/>
+  <entry type="GenericDeleted" style="#BA1A1A"/>
+  <entry type="GenericHeading" style="bold #415F90"/>
+  <entry type="GenericSubheading" style="bold #415F90"/>
+  <entry type="GenericEmph" style="italic"/>
+  <entry type="GenericStrong" style="bold"/>
+  <entry type="GenericPrompt" style="#73777F"/>
+  <entry type="LineNumbers" style="#919093"/>
+  <entry type="LineNumbersTable" style="#919093"/>
+  <entry type="LineHighlight" style="bg:#EDEDF4"/>
+  <!-- structural layer (optional): uncomment for cyan architecture cues
+  <entry type="KeywordType" style="#006876"/>
+  <entry type="NameClass" style="#006876"/>
+  <entry type="NameNamespace" style="#006876"/>
+  <entry type="NameAttribute" style="#006876"/>
+  -->
+</style>

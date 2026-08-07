@@ -1,0 +1,35 @@
+# baseline-light — Alacritty theme, sibling of the Ghostty baseline-light theme.
+# Usage (alacritty.toml): [general] import = ["~/.config/alacritty/baseline-light.toml"]
+# (Alacritty 0.13 and earlier: top-level `import = [...]`.)
+
+[colors.primary]
+background = "#F8F9FF"
+foreground = "#42474E"
+
+[colors.cursor]
+text = "#FFFFFF"
+cursor = "#35618E"
+
+[colors.selection]
+text = "#001D36"
+background = "#D1E4FF"
+
+[colors.normal]
+black = "#191C20"
+red = "#BA1A1A"
+green = "#3C683A"
+yellow = "#685F12"
+blue = "#415F90"
+magenta = "#7B4E7F"
+cyan = "#006876"
+white = "#E1E2E8"
+
+[colors.bright]
+black = "#73777F"
+red = "#93000A"
+green = "#245024"
+yellow = "#4F4800"
+blue = "#284777"
+magenta = "#613766"
+cyan = "#004E59"
+white = "#FFFFFF"

@@ -1,0 +1,37 @@
+<!-- baseline-dark — Chroma style, sibling of the Helix baseline_dark theme.
+     Minimal highlighting: constants and strings green, functions blue,
+     escapes and symbols cyan, punctuation receded; keywords, operators,
+     and variables stay at the default foreground. Background matches
+     markup.raw.block (surfaceContainerLow). -->
+<style name="baseline-dark">
+  <entry type="Background" style="bg:#191C20 #C3C7CF"/>
+  <entry type="Text" style="#C3C7CF"/>
+  <entry type="Error" style="#FFB3AC"/>
+  <entry type="Comment" style="italic #77777A"/>
+  <entry type="Literal" style="#A1D39A"/>
+  <entry type="LiteralStringEscape" style="#83D3E3"/>
+  <entry type="LiteralStringSymbol" style="#83D3E3"/>
+  <entry type="KeywordConstant" style="#A1D39A"/>
+  <entry type="NameConstant" style="#A1D39A"/>
+  <entry type="NameFunction" style="#AAC7FF"/>
+  <entry type="NameBuiltin" style="#AAC7FF"/>
+  <entry type="NameTag" style="#AAC7FF"/>
+  <entry type="NameDecorator" style="#EBB5ED"/>
+  <entry type="Punctuation" style="#8D9199"/>
+  <entry type="GenericInserted" style="#A1D39A"/>
+  <entry type="GenericDeleted" style="#FFB3AC"/>
+  <entry type="GenericHeading" style="bold #AAC7FF"/>
+  <entry type="GenericSubheading" style="bold #AAC7FF"/>
+  <entry type="GenericEmph" style="italic"/>
+  <entry type="GenericStrong" style="bold"/>
+  <entry type="GenericPrompt" style="#8D9199"/>
+  <entry type="LineNumbers" style="#5E5E61"/>
+  <entry type="LineNumbersTable" style="#5E5E61"/>
+  <entry type="LineHighlight" style="bg:#1D2024"/>
+  <!-- structural layer (optional): uncomment for cyan architecture cues
+  <entry type="KeywordType" style="#83D3E3"/>
+  <entry type="NameClass" style="#83D3E3"/>
+  <entry type="NameNamespace" style="#83D3E3"/>
+  <entry type="NameAttribute" style="#83D3E3"/>
+  -->
+</style>
