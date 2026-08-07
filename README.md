@@ -1,4 +1,4 @@
-# baseline
+# baseline-themes
 
 baseline is a pair of matched dark/light themes for a limited set of terminal
 and Text User Interface (TUI) applications.
@@ -7,6 +7,10 @@ Built using Material Design 3 tonal palettes, the design objective is
 comfortably readable, all day long. Every accent is sampled at a single tone
 per mode (80 dark, 40 light), so all highlights carry identical contrast weight:
 ~10.8:1 on the dark surface, ~6.2:1 on the light.
+
+![baseline dark — swatch.c and swatch.go in Helix](samples/screenshots/c-go-dark.png)
+
+![baseline light — swatch.py and swatch.rs in Helix](samples/screenshots/python-rust-light.png)
 
 Currently supported — each directory holds the theme files and a README with
 install notes:

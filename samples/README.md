@@ -22,14 +22,11 @@ tsc swatch.ts && node swatch.js
 
 ## Screenshots
 
-Rendered in Helix with the baseline themes. Naming convention:
-`screenshots/<language>-<mode>.png`.
+Rendered in Helix as side-by-side pairs, named `<left>-<right>-<mode>.png`;
+browse them all in the [gallery](screenshots/).
 
-| Language   | Source                     | Dark                                    | Light                                     |
-| ---------- | -------------------------- | --------------------------------------- | ----------------------------------------- |
-| Python     | [swatch.py](swatch.py)     | [dark](screenshots/python-dark.png)     | [light](screenshots/python-light.png)     |
-| Go         | [swatch.go](swatch.go)     | [dark](screenshots/go-dark.png)         | [light](screenshots/go-light.png)         |
-| Rust       | [swatch.rs](swatch.rs)     | [dark](screenshots/rust-dark.png)       | [light](screenshots/rust-light.png)       |
-| Bash       | [swatch.sh](swatch.sh)     | [dark](screenshots/bash-dark.png)       | [light](screenshots/bash-light.png)       |
-| C          | [swatch.c](swatch.c)       | [dark](screenshots/c-dark.png)          | [light](screenshots/c-light.png)          |
-| TypeScript | [swatch.ts](swatch.ts)     | [dark](screenshots/typescript-dark.png) | [light](screenshots/typescript-light.png) |
+| Languages         | Sources                                          | Dark                                          | Light                                           |
+| ----------------- | ------------------------------------------------ | --------------------------------------------- | ----------------------------------------------- |
+| C · Go            | [swatch.c](swatch.c) · [swatch.go](swatch.go)    | [dark](screenshots/c-go-dark.png)             | [light](screenshots/c-go-light.png)             |
+| Python · Rust     | [swatch.py](swatch.py) · [swatch.rs](swatch.rs)  | [dark](screenshots/python-rust-dark.png)      | [light](screenshots/python-rust-light.png)      |
+| Bash · TypeScript | [swatch.sh](swatch.sh) · [swatch.ts](swatch.ts)  | [dark](screenshots/shell-typescript-dark.png) | [light](screenshots/shell-typescript-light.png) |

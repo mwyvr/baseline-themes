@@ -10,7 +10,7 @@
 ![python-rust-dark.png](python-rust-dark.png)
 ![python-rust-light.png](python-rust-light.png)
 
-## Shell and Typescript
+## Shell and TypeScript
 
 ![shell-typescript-dark.png](shell-typescript-dark.png)
 ![shell-typescript-light.png](shell-typescript-light.png)
