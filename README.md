@@ -8,6 +8,10 @@ comfortably readable, all day long. Every accent is sampled at a single tone
 per mode (80 dark, 40 light), so all highlights carry identical contrast weight:
 ~10.8:1 on the dark surface, ~6.2:1 on the light.
 
+Originally developed for use with the Helix editor, and to support terminals
+on Linux and macOS, baseline also provides a comparable experience on Neovim
+and vim.
+
 ![baseline dark — swatch.c and swatch.go in Helix](samples/screenshots/c-go-dark.png)
 
 ![baseline light — swatch.py and swatch.rs in Helix](samples/screenshots/python-rust-light.png)
