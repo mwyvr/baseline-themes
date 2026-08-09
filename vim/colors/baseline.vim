@@ -1,8 +1,16 @@
 " baseline — dual-mode Vim colorscheme, sibling of the Helix themes.
 " Legacy syntax groups only; Vim's regex highlighting is coarser than
-" treesitter, so this is a reduced rendering of baseline's Helix implementation.
-" Neovim " users should prefer nvim/colors/baseline.lua for the full experience.
+" treesitter, so this is a reduced rendering of the philosophy. Neovim
+" users should prefer nvim/colors/baseline.lua for the full experience.
 " Requires a truecolor terminal and :set termguicolors (or a GUI).
+
+" This theme defines truecolor (gui*) values only. If the terminal
+" advertises truecolor and termguicolors is off, enable it — otherwise Vim
+" silently falls back to its stock cterm palette and none of this applies.
+if has("termguicolors") && !&termguicolors
+      \ && ($COLORTERM ==# "truecolor" || $COLORTERM ==# "24bit")
+  set termguicolors
+endif
 
 hi clear
 if exists("syntax_on")
@@ -42,7 +50,11 @@ function! s:hi(group, fg, bg, attr, sp) abort
   let l:cmd = "hi " . a:group
   let l:cmd .= " guifg=" . (a:fg ==# "" ? "NONE" : a:fg)
   let l:cmd .= " guibg=" . (a:bg ==# "" ? "NONE" : a:bg)
-  let l:cmd .= " gui=" . (a:attr ==# "" ? "NONE" : a:attr)
+  let l:attr = a:attr ==# "" ? "NONE" : a:attr
+  " Vim sources attributes from cterm= in terminals even under
+  " termguicolors (colors come from gui*); term= covers colorless
+  " terminals. Mirror into all three so no stock default survives.
+  let l:cmd .= " gui=" . l:attr . " cterm=" . l:attr . " term=" . l:attr
   if a:sp !=# ""
     let l:cmd .= " guisp=" . a:sp
   endif
