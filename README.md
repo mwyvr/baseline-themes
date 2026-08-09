@@ -1,6 +1,6 @@
 # baseline-themes
 
-baseline is a pair of matched dark/light themes for a limited set of terminal
+baseline is a pair of matched dark/light themes for a curated set of terminal
 and Text User Interface (TUI) applications.
 
 Built using Material Design 3 tonal palettes, the design objective is
@@ -8,9 +8,7 @@ comfortably readable, all day long. Every accent is sampled at a single tone
 per mode (80 dark, 40 light), so all highlights carry identical contrast weight:
 ~10.8:1 on the dark surface, ~6.2:1 on the light.
 
-Originally developed for use with the Helix editor, and to support terminals
-on Linux and macOS, baseline also provides a comparable experience on Neovim
-and vim.
+Helix editor samples (Neovim and Vim also supported):
 
 ![baseline dark — swatch.c and swatch.go in Helix](samples/screenshots/c-go-dark.png)
 
@@ -39,8 +37,10 @@ dconf profile dumps and is not provided.
   features minimal highlighting: constants, strings, functions, parameters,
   and little else — keywords, operators, and variables stay at the default
   foreground, and punctuation recedes. ([setup](helix/))
-- [Neovim](https://neovim.io) — the same baseline Helix philosophy, LSP semantic tokens aligned. ([setup](nvim/))
-- [Vim](https://www.vim.org) — a reduced rendering for classic syntax groups, because Vim ships everywhere. ([setup](vim/))
+- [Neovim](https://neovim.io) — the Helix philosophy on treesitter captures,
+  one dual-mode file; LSP semantic tokens aligned. ([setup](nvim/))
+- [Vim](https://www.vim.org) — a reduced rendering for classic syntax
+  groups, because Vim ships everywhere. ([setup](vim/))
 - [lazygit](https://github.com/jesseduffield/lazygit), a simple terminal UI
   for git commands. ([setup](lazygit/))
 
@@ -52,7 +52,7 @@ dconf profile dumps and is not provided.
 
 ## Samples
 
-Parallel implementations of one example program across Python, Go, Rust,
+Parallel implementations of one small program across Python, Go, Rust,
 Bash, C, and TypeScript, for judging how baseline renders common syntax
 in each — see [samples/](samples/).
 
